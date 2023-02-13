@@ -13,3 +13,6 @@ def calcular_descuento(cantidad,cliente):
         descuento += 0.01
 
     return descuento
+
+
+
