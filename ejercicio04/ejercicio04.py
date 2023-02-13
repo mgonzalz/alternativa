@@ -6,10 +6,10 @@ Escribir un algoritmo que toma como entrada las cuatro notas de un alumno y que 
 El problema anterior se puede resolver definiendo una estructura de datos que, para un alumno, agrupa su media y la evaluación. Un elemento de este tipo calcula el algoritmo solicitado.
 '''
 Entrada
-nota1 float
-nota2 float
-nota3 float
-nota4 float
+nota1: float
+nota2: float
+nota3: float
+nota4: float
 
 Precondiciones
 nota1, nota2, nota3, nota4 >= 0
@@ -19,8 +19,11 @@ realizacion
 media = (nota1 + nota2 + nota3 + nota4)/4
 si media > 15
 #Se mostraria el mensaje "Alumno con talento"
+    print("Alumno con talento")
 si no si 12 <= media <= 15
 #Se mostraria el mensaje "Con capacidad"
+    print("Con capacidad")
 si no media < 12
 #Se mostraria el mensaje "Debe reorientarse"
+    print("Debe reorientarse")
 fin si
