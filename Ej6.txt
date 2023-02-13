@@ -1,0 +1,36 @@
+PSEUDOCODIGO: 
+
+Entrada:
+cantidad = float
+cliente = string 
+
+Realización:
+si # la cantidad es mayor o igual que 10.000 y menor o igual que 20.000
+   cantidad >= 10_000 and cantidad <= 20_000:
+entonces
+   descuento = 0.1
+si no si  #la cantidad es mayor o igual que 20.001 y menor o igual que 40.000
+   cantidad >= 20_001 and cantidad <= 40_000:
+entonces
+   descuento = 0.15
+si no  #la cantidad es mayor que 40.000
+   cantidad > 40_000:
+entonces
+   descuento = 0.2
+
+si #  el cliente es COMMAQ
+   cliente == 'COMMAQ':
+entonces
+   descuento -= 0.02
+si no si #el cliente es BEL
+   cliente == 'BEL':
+entonces
+   descuento += 0.01
+
+fin si 
+
+
+Resultado:
+descuento = float 
+
+
