@@ -1,0 +1,43 @@
+PSEUDOCODIGO
+
+COSTE_TOTAL_VIAJE(alumnos, dias)
+
+ENTRADA
+alumnos : NATURAL
+dias : NATURAL
+
+INICIALIZACION
+alumnos ← ???
+coste_trayecto ← 0; coste_comida ← dias*3,50 ; coste_alojamiento ← 0; coste_por_alumno ← 0; coste_total ← 0
+
+PRECONDICIONES
+alumnos >= 0
+dias >= 0
+
+REALIZACIÓN
+si 
+    n<=25 
+entonces            #nº alumnos menor 25
+    coste_trayecto = 67.30
+si no si 
+    n<=30
+entonces            #alumnos entre 25 y 30
+    coste_trayecto = 61.00
+    coste_alojamiento = 4.75*dias
+si no si 
+    n<=35
+entonces            #alumnos entre 30 y 35
+    coste_trayecto = 61.00
+    coste_alojamiento = 4.00*dias
+si no si
+    n>35
+entonces            #alumnos mayor 35
+    coste_trayecto = 61.00
+    coste_alojamiento = 3.50*dias
+fin si
+coste_por_alumno ← coste_trayecto + coste_comida + coste_alojamiento
+coste_total ← coste_por_alumno*alumnos
+
+fin COSTE_TOTAL_VIAJE
+
+
