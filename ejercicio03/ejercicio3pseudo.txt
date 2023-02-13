@@ -6,35 +6,37 @@ Escribir el algoritmo de cálculo del importe del descuento en una compra dada."
 #si el importe esta entre 100 y 500 hay un descuento del 5%
 #si el importe es mayor a 500 hay un descuento del 8%
 
+DESCUENTO(importe):
 
-Entrada:
+ENTRADA:
 importe = float
 descuento = float
 importe_final = float
 
-Precondicion:
+PRECONDICION:
 importe > 0
 
-Realizacion:
-
-si #el importe es menor a 100
+REALIZACION:
+si                         #importe menor a 100
     importe < 100:
-entonces #no hay descuento
+entonces                   #no descuento
     descuento = 0
     importe_final = importe
-si no si #el importe esta entre 100 y 500
+si no si                   #importe entre 100 y 500
     importe < 500
-entonces #hay un descuento del 5%
+entonces                   #descuento del 5%
     descuento = importe * 0.05
     importe_final = importe - descuento
-si no #el importe es mayor a 500, hay un descuento del 8%
+si no                      #importe mayor a 500, hay un descuento del 8%
     descuento = importe * 0.08
     importe_final = importe - descuento
     
 fin si
 
-Postcondicion:
+POSTCONDICION:
 importe_final <= importe
 
-Resultado:
+RESULTADO:
 importe_final = float
+
+fin descuento
