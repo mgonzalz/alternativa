@@ -1,0 +1,25 @@
+ALGORITMO descuento_familiar
+
+*Entrada*  
+n : ENTERO # número de niños en la familia  
+  
+*Resultado* : REAL  
+  
+*Precondicion*  
+n > 0 # que haya algún niño en la familia  
+  
+*Variables*  
+k : ENTERO # número de niños "de más"  
+  
+*Realizacion*  
+# calculamos el número de niños de más  
+k <-- n - 4  
+  
+*Postcondicion*  
+si n<2 ==> Resultado = 0 # si hay menos de 2 niños no se aplica descuento
+o si no, si n=2 ==> Resultado = 10
+o si no, si n=3 ==> Resultado = 15
+o si no, si n=4 ==> Resultado = 18
+o si no, si n>4 ==> Resultado = 18 + k
+
+fin descuento_familiar
