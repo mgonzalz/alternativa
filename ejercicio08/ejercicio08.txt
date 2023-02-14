@@ -1,0 +1,52 @@
+Ejercicio 8: Prima anual
+#No ha tenido accidentes con una responsabilidad superior o igual al 20 % recibe la prima anual completa
+#Ha tenido un accidente con una responsabilidad superior o igual al 20 % recibe la mitad de la prima
+#Ha tenido dos accidentes con una responsabilidad superior o igual al 20 % recibe un tercio de la prima
+#Ha renido tres accidentes con una responsabilidad superior o igual al 20 % recibe un cuarto de la prima
+#Ha tenido más de tres accidentes con una responsabilidad superior o igual al 20 % no recibe la prima
+#Prima = prima de distancia + prima de antigüedad
+#Prima de distancia = 0.01 * km recorridos durante el año (máximo 400€)
+#Prima de antigüedad = 200€ + 20€ por año adicional (a partir del 4º año)
+
+Algoritmo Prima_anual
+
+Entrada:
+kilometros_recorridos: float
+antiguedad: int
+accidentes_graves: int
+
+Precondiciones:
+kilometros_recorridos >= 0
+antiguedad >= 4
+accidentes_graves >= 0
+
+Variables:
+prima_distancia: float
+prima_antiguedad: float
+prima = prima_distancia + prima_antiguedad
+
+Realizacion:
+prima_distancia = 0.01 * kilometros_recorridos
+prima_antiguedad = 200 + 20 * (antiguedad - 4)
+si accidentes_graves == 0
+    resultado = prima
+si no si accidentes_graves == 1
+    resultado = prima / 2
+si no si accidentes_graves == 2
+    resultado = prima / 3
+si no si accidentes_graves == 3
+    resultado = prima / 4
+si no
+    resultado = 0
+fin si
+
+Postcondiciones:
+0 =< prima_distancia < 400
+200 =< prima_antiguedad
+0 =< prima
+0 =< resultado
+
+Resultado:
+resultado: float
+
+fin Algoritmo Prima_anual
