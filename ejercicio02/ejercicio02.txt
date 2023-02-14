@@ -7,10 +7,18 @@ Entrada:
 
 Inicializacion:
     a ← ??? ; b ← ???
-
+Funciones:
+    ordenar(suma, producto, a, b) <- string
+        si a*b <a y a*b< b 
+            entonces imprimir (a, "<", a+b, "<", b, "<", a*b)
+        sino si a<b y a+b>a y a+b>a y a+b<b
+            entonces imprimir (a, "<", a+b. "<", a*b, "<",b)
+        sino si a*b >a y a*b<b y a<b
+            entonces imprimir (a, "<", a*b, "<", a+b,"<", b)
+        sino
+            imprimir(a,"<", b,"<", a+b,"<", a*b)
+    fin ordenar
 Realizacion:
     suma ← a + b ; producto ← a * b
-    orden ← [a, b, suma, producto]
-
-
+    ordenar(suma, producto, a, b) #funcion que ordene la lista
 fin ordenar

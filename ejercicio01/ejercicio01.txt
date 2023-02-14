@@ -1,0 +1,35 @@
+'''
+El tipo DÍA define por enumeración un día de la semana. En el ejercicio que determina el día del 1 de mayo de un año dado, también se ha especificado una función sucesor para un día de la semana. Falta dar una definición de esta función. Dar una definición completa de la función sucesor para un día de la semana.
+'''
+PSEUDOCODIGO #Sucesor del dia de la semana
+
+Entrada:
+    dia <- entero
+    dias_Semana <- ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+
+Precondicion:
+    1 <= dia <= 7
+Variables:
+    dia <- ???
+
+Funciones:
+    funcion_sucesor(dia) <- string #Devuelve un texto
+        si dia == "Lunes" 
+            entonces retornar "Martes"
+        sino si dia == "Martes" 
+            entonces retornar "Miercoles"
+        sino si dia == "Miercoles" 
+            entonces retornar "Jueves"
+        sino si dia == "Jueves" 
+            entonces retornar "Viernes"
+        sino si dia == "Viernes" 
+            entonces retornar "Sabado"
+        sino si dia == "Sabado" 
+            entonces retornar "Domingo"
+        sino si dia == "Domingo" 
+            entonces retornar "Lunes"
+    fin funcion_sucesor
+
+Realizacion:
+    dia <- dias_Semana[dia-1]
+    imprimir("El dia siguiente es: ", funcion_sucesor(dia))
